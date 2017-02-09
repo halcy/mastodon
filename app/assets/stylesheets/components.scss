@@ -744,3 +744,15 @@ button.active i.fa-retweet {
     background: lighten($color1, 6%);
   }
 }
+
+.account__outer {
+  border-bottom: '1px solid #363c4b'    
+}
+
+.account__display-name {
+  color: '#9baec8';
+}
+
+.account__note {
+  color: '#616b86';
+}

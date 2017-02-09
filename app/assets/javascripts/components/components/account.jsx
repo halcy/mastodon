@@ -15,13 +15,11 @@ const messages = defineMessages({
 
 const outerStyle = {
   padding: '10px',
-  borderBottom: '1px solid #363c4b'
 };
 
 const itemStyle = {
   flex: '1 1 auto',
   display: 'block',
-  color: '#9baec8',
   overflow: 'hidden',
   textDecoration: 'none',
   fontSize: '14px'
@@ -30,7 +28,6 @@ const itemStyle = {
 const noteStyle = {
   paddingTop: '5px',
   fontSize: '12px',
-  color: '#616b86'
 };
 
 const buttonsStyle = {
@@ -75,7 +72,7 @@ const Account = React.createClass({
     let note, buttons;
 
     if (account.get('note').length > 0 && withNote) {
-      note = <div style={noteStyle}>{account.get('note')}</div>;
+      note = <div className="account__note" style={noteStyle}>{account.get('note')}</div>;
     }
 
     if (account.get('id') !== me && account.get('relationship', null) !== null) {
@@ -93,7 +90,7 @@ const Account = React.createClass({
     }
 
     return (
-      <div style={outerStyle}>
+      <div className="account__outer" style={outerStyle}>
         <div style={{ display: 'flex' }}>
           <Permalink key={account.get('id')} style={itemStyle} className='account__display-name' href={account.get('url')} to={`/accounts/${account.get('id')}`}>
             <div style={{ float: 'left', marginLeft: '12px', marginRight: '10px' }}><Avatar src={account.get('avatar')} size={36} /></div>
