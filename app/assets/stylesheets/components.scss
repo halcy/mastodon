@@ -728,7 +728,10 @@ a.status__content__spoiler-link {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: darken($color1, 7%);
+  background: image-url('background-photo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .drawer {
