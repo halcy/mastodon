@@ -7,4 +7,6 @@ sudo su - mastodon -c 'cd ~mastodon/live && RAILS_ENV=production bundle exec rai
 #
 # To set first user admin:
 # * User.first.update(admin: true)
-
+#
+# To delete a user:
+# * Account.find_local('yourusername').user.destroy!
