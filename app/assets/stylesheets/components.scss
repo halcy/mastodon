@@ -127,7 +127,7 @@
   transition: all 100ms ease-in;
 
   &:hover, &:active, &:focus {
-    color: lighten($color1, 26%);
+    color: darken($color2, 26%);
     transition: all 200ms ease-out;
   }
 
@@ -137,7 +137,7 @@
   }
 
   &.active {
-    color: $color4;
+    color: darken($color2, 26%);
   }
 
   &::-moz-focus-inner {
