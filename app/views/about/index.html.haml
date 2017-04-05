@@ -20,14 +20,21 @@
     Icosahedron.website
 
   %p= t('about.about_instance', instance: Rails.configuration.x.local_domain).html_safe
-  %p 
-    You can <a href="https://icosahedron.website/auth/sign_up">make an account</a> on any Mastodon instance and interact with users on this or any other one. That being said, here's reasons why you should choose this instance:
-    %ul
-      %li You like <em>stellated platonic solids</em> very much.
-      %li You think <a href="https://icosahedron.website/about/more">our rules</a> make <em>a lot of sense</em>.
-      %li You want to try out Mastodon / being on The Fediverse, this place being as good as any other instance for that.
-      %li You think, correctly, that <a href="https://icosahedron.website/users/halcy/">@halcy</a> is <em>exceedingly good at online</em>.
-      
+  - if @open_registrations
+    %p 
+      You can <a href="https://icosahedron.website/auth/sign_up">make an account</a> on any Mastodon instance and interact with users on this or any other one. That being said, here's reasons why you should choose this instance:
+      %ul
+        %li You like <em>stellated platonic solids</em> very much.
+        %li You think <a href="https://icosahedron.website/about/more">our rules</a> make <em>a lot of sense</em>.
+        %li You want to try out Mastodon / being on The Fediverse, this place being as good as any other instance for that.
+        %li You think, correctly, that <a href="https://icosahedron.website/users/halcy/">@halcy</a> is <em>exceedingly good at online</em>.
+  - else
+    %p
+      - if @closed_registrations_message.blank?
+        %p= t('about.closed_registrations')
+      - else
+        = @closed_registrations_message.html_safe
+
   .screenshot= image_tag 'screenshot.png'
 
   - unless @description.blank?
