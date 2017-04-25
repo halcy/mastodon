@@ -139,7 +139,7 @@
   transition: all 100ms ease-in;
 
   &:hover, &:active, &:focus {
-    color: lighten($color1, 26%);
+    color: darken($color2, 26%);
     transition: all 200ms ease-out;
   }
 
@@ -149,7 +149,7 @@
   }
 
   &.active {
-    color: $color4;
+    color: darken($color2, 26%);
   }
 
   &::-moz-focus-inner {
@@ -816,7 +816,10 @@ a.status__content__spoiler-link {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: darken($color1, 7%);
+  background: image-url('background-photo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .drawer {
