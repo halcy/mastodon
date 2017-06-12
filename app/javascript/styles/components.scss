@@ -203,7 +203,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: lighten($ui-base-color, 26%);
+    color: lighten($ui-primary-color, 26%);
     transition: color 200ms ease-out;
   }
 
@@ -213,7 +213,7 @@
   }
 
   &.active {
-    color: $ui-highlight-color;
+    color: $ui-primary-color;
   }
 
   &::-moz-focus-inner {
@@ -1299,7 +1299,10 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: darken($ui-base-color, 7%);
+  background: image-url('background-photo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .drawer {
