@@ -1,5 +1,5 @@
 - content_for :header_tags do
-  = javascript_pack_tag 'public', integrity: true, crossorigin: 'anonymous'
+  = javascript_include_tag 'application_public', integrity: true, crossorigin: 'anonymous'
 
 - content_for :page_title do
   = site_hostname
@@ -17,13 +17,13 @@
 
 .wrapper
   %h1
-    = image_tag asset_pack_path('logo.png')
+    = image_tag 'logo.png'
     = Setting.site_title
 
-  %p!= t('about.about_mastodon')
+  %p= t('about.about_mastodon').html_safe
 
   .screenshot-with-signup
-    .mascot= image_tag asset_pack_path('fluffy-elephant-friend.png')
+    .mascot= image_tag 'fluffy-elephant-friend.png'
 
     - if @instance_presenter.open_registrations
       = render 'registration'
@@ -32,7 +32,7 @@
         - if @instance_presenter.closed_registrations_message.blank?
           %p= t('about.closed_registrations')
         - else
-          != @instance_presenter.closed_registrations_message
+          = @instance_presenter.closed_registrations_message.html_safe
         .info
           = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
           ·
@@ -74,7 +74,7 @@
 
   - unless @instance_presenter.site_description.blank?
     %h3= t('about.description_headline', domain: site_hostname)
-    %p!= @instance_presenter.site_description
+    %p= @instance_presenter.site_description.html_safe
 
   .actions
     .info
