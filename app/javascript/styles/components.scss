@@ -201,9 +201,8 @@
   transition: color 100ms ease-in;
 
   &:hover,
-  &:active,
-  &:focus {
-    color: lighten($ui-primary-color, 26%);
+  &:active {
+    color: $ui-base-color;
     transition: color 200ms ease-out;
   }
 
@@ -213,7 +212,7 @@
   }
 
   &.active {
-    color: $ui-primary-color;
+    color: $ui-base-color;
   }
 
   &::-moz-focus-inner {
