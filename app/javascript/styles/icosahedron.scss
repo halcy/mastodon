@@ -1,0 +1,52 @@
+@import 'mastodon/mixins';
+
+// Commonly used web colors
+$black: #000000;            // Black
+$white: #ffffff;            // White
+$success-green: #79bd9a;    // Padua
+$error-red: #df405a;        // Cerise
+$warning-red: #ff5050;      // Sunset Orange
+$gold-star: #ca8f04;        // Dark Goldenrod
+
+// Values from the classic Mastodon UI
+$classic-base-color: #404146;         // Midnight Express
+$classic-primary-color: #a5d296;      // Echo Blue
+$classic-secondary-color: #a5d296;    // Pattens Blue
+$classic-highlight-color: #8283a7;    // Summer Sky
+
+// Variables for defaults in UI
+$base-shadow-color: $black !default;
+$base-overlay-background: $black !default;
+$base-border-color: $white !default;
+$simple-background-color: $white !default;
+$primary-text-color: $white !default;
+$valid-value-color: $success-green !default;
+$error-value-color: $error-red !default;
+
+// Tell UI to use selected colors
+$ui-base-color: $classic-base-color !default;             // Darkest
+$ui-base-lighter-color: lighten($ui-base-color, 26%) !default;
+$ui-primary-color: $classic-primary-color !default;       // Lighter
+$ui-secondary-color: $classic-secondary-color !default;   // Lightest
+$ui-highlight-color: $classic-highlight-color !default;   // Vibrant
+
+@import 'fonts/roboto';
+@import 'fonts/roboto-mono';
+@import 'fonts/montserrat';
+
+@import 'mastodon/reset';
+@import 'mastodon/basics';
+@import 'mastodon/containers';
+@import 'mastodon/lists';
+@import 'mastodon/footer';
+@import 'mastodon/compact_header';
+@import 'mastodon/landing_strip';
+@import 'mastodon/forms';
+@import 'mastodon/accounts';
+@import 'mastodon/stream_entries';
+@import 'mastodon/components';
+@import 'mastodon/emoji_picker';
+@import 'mastodon/about';
+@import 'mastodon/tables';
+@import 'mastodon/admin';
+@import 'mastodon/rtl';
