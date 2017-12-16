@@ -1,0 +1,66 @@
+@import 'mastodon/mixins';
+
+@import 'icosa_theme/variables';
+
+@import 'fonts/roboto';
+@import 'fonts/roboto-mono';
+@import 'fonts/montserrat';
+
+@import 'mastodon/reset';
+@import 'mastodon/basics';
+@import 'mastodon/containers';
+@import 'mastodon/lists';
+@import 'mastodon/footer';
+@import 'mastodon/compact_header';
+@import 'mastodon/landing_strip';
+@import 'mastodon/forms';
+@import 'mastodon/accounts';
+@import 'mastodon/stream_entries';
+@import 'mastodon/components';
+@import 'mastodon/emoji_picker';
+@import 'mastodon/about';
+@import 'mastodon/tables';
+@import 'mastodon/admin';
+@import 'mastodon/rtl';
+
+@import 'icosa_theme/boost';
+@import 'icosa_theme/aboutpage_fixes';
+
+body.app-body {
+    background: url('../images/background-photo.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+.ui {
+    background: none !important;
+}
+
+div.emoji-mart-anchors {
+    color: $ui-base-color;
+}
+
+/* xkeeper-tweaks */
+textarea:fo­cus-ring, input:fo­cus-ring, button:fo­cus-ring, *:fo­cus-ring {
+    /* Make the textbox and buttons indicate being highlighted in some way */
+    box-shadow: inset 0 0 2px 1px darken($ui-base-color, 20%);
+}
+
+/*textarea:-moz-focusring, input:-moz-focusring, button:-moz-focusring, *:-moz-focusring {
+    box-shadow: inset 0 0 2px 1px darken($ui-base-color, 20%);
+}
+
+div.status > div + div + div > div > button:hover, div.status > div + div + div > div > button:focus {
+    color: white;
+    background: rgba(0,0,0,.7);
+}*/
+
+.compose-form__buttons button.active {
+    /* make the cw button more obvious when toggled */
+    background: rgba(0, 0, 0, .6);
+    border-radius: 5px;
+    color: lighten($classic-secondary-color, 26%);
+    box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, .6);
+}
+
