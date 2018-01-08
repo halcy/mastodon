@@ -35,9 +35,6 @@
           %div{ role: 'presentation', class: 'float-2' }
           %div{ role: 'presentation', class: 'float-3' }
         .heading
-          %h1
-            = @instance_presenter.site_title
-            %small= t 'about.hosted_on', domain: site_hostname
         - if @instance_presenter.open_registrations
           = render 'registration'
         - else
