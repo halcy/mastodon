@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 sudo echo "applying asset changes..."
 sudo chown -R mastodon:mastodon *
 sudo su - mastodon -c 'cd ~mastodon/live && gem install bundler'
