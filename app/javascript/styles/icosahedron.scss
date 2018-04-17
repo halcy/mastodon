@@ -65,3 +65,6 @@ div.status > div + div + div > div > button:hover, div.status > div + div + div 
     box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, .6);
 }
 
+.reduce-motion button.icon-button.active i.fa-retweet {
+    color: $classic-secondary-color;
+}
