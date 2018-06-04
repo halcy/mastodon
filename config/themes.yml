@@ -1,2 +1,3 @@
-default: styles/application.scss
+default: styles/icosahedron.scss
+mastodefault: styles/application.scss
 contrast: styles/contrast.scss
