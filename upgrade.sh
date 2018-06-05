@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo echo "applying asset changes..."
-sudo chown -R mastodon:mastodon *
+#sudo chown -R mastodon:mastodon *
 sudo su - mastodon -c 'cd ~mastodon/live && gem install bundler'
 sudo su - mastodon -c 'cd ~mastodon/live && bundle install --deployment --without development test'
 sudo su - mastodon -c 'cd ~mastodon/live && yarn'
