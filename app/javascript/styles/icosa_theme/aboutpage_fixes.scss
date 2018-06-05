@@ -1,0 +1,64 @@
+body {
+    background: url('../images/background-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.landing-page {
+    
+    .header-wrapper {
+        padding-top: 15px;
+        background: $ui-base-color;
+        background: url('../images/background-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+    
+    }
+    
+    .information-board {
+        background: darken($ui-base-color, 4%);
+        background: url('../images/background-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 20px 0;
+    }
+    
+    .header {
+        .hero {
+            .floats {
+                .float-1 {
+                    width: 221px;
+                    height: 229px;
+                    right: -120px;
+                    bottom: 0;
+                    animation-duration: 3s;
+                    background-image: url('../images/icosmall.png');
+                }
+
+                .float-2 {
+                    width: 221px;
+                    height: 229px;
+                    right: 210px;
+                    bottom: 0;
+                    animation-duration: 3.5s;
+                    animation-delay: 0.2s;
+                    background-image: url('../images/icosmall.png');
+                }
+
+                .float-3 {
+                    width: 221px;
+                    height: 229px;
+                    right: 110px;
+                    top: -30px;
+                    animation-duration: 4s;
+                    animation-delay: 0.5s;
+                    background-image: url('../images/icosmall.png');
+                }
+            }
+        }
+    }
+}
