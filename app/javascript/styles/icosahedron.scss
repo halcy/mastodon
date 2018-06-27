@@ -70,3 +70,51 @@ div.status > div + div + div > div > button:hover, div.status > div + div + div 
 .reduce-motion button.icon-button.active i.fa-retweet {
     color: $classic-secondary-color;
 }
+
+/* aeon-tweaks */
+.community-timeline__section-headline,
+.public-timeline__section-headline,
+.account__section-headline {
+    border-bottom: 0;
+    background: #4a4b51;
+}
+
+.community-timeline__section-headline a,
+.public-timeline__section-headline a,
+.account__section-headline a {
+	padding: 2px 0 2px 0;
+    background: #4a4b51;
+    border-bottom: 2px solid #53555b;
+    border-top: 2px solid #4a4b51
+}
+
+.community-timeline__section-headline .active,
+.public-timeline__section-headline .active,
+.account__section-headline .active {
+	background: #404146;
+    border-bottom: 2px solid #404146;
+    border-top: 2px solid #53555b;
+	border-radius: 15px 15px 0 0;        
+}
+
+.community-timeline__section-headline .active::before,
+.public-timeline__section-headline .active::before,
+.account__section-headline .active::before {
+	display: none !important;
+    visibility: hidden !important;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.community-timeline__section-headline .active::after,
+.public-timeline__section-headline .active::after,
+.account__section-headline .active::after {
+	display: none !important;
+    visibility: hidden !important;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
