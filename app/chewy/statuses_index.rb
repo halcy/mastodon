@@ -32,6 +32,7 @@ class StatusesIndex < Chewy::Index
   }
 
   define_type ::Status.unscoped.without_reblogs do
+    default_import_options batch_size: 2000
     crutch :mentions do |collection|
       data = ::Mention.where(status_id: collection.map(&:id)).pluck(:status_id, :account_id)
       data.each.with_object({}) { |(id, name), result| (result[id] ||= []).push(name) }
