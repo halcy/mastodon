@@ -289,7 +289,7 @@ $small-breakpoint: 960px;
   .grid {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 350px 350px 350px auto;
     grid-auto-columns: 25%;
     grid-auto-rows: max-content;
 
