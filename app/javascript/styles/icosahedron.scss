@@ -1,0 +1,97 @@
+@import 'icosa_theme/variables';
+@import 'application';
+
+@import 'icosa_theme/old_about';
+
+@import 'icosa_theme/boost';
+@import 'icosa_theme/aboutpage_fixes';
+
+body.app-body {
+    background: url('../images/background-photo.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+.ui {
+    background: none !important;
+}
+
+div.emoji-mart-anchors {
+    color: $ui-base-color;
+}
+
+/* xkeeper-tweaks */
+textarea:fo­cus-ring, input:fo­cus-ring, button:fo­cus-ring, *:fo­cus-ring {
+    /* Make the textbox and buttons indicate being highlighted in some way */
+    box-shadow: inset 0 0 2px 1px darken($ui-base-color, 20%);
+}
+
+/*textarea:-moz-focusring, input:-moz-focusring, button:-moz-focusring, *:-moz-focusring {
+    box-shadow: inset 0 0 2px 1px darken($ui-base-color, 20%);
+}
+
+div.status > div + div + div > div > button:hover, div.status > div + div + div > div > button:focus {
+    color: white;
+    background: rgba(0,0,0,.7);
+}*/
+
+.compose-form__buttons button.active {
+    /* make the cw button more obvious when toggled */
+    background: rgba(0, 0, 0, .6);
+    border-radius: 5px;
+    color: lighten($classic-secondary-color, 26%);
+    box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, .6);
+}
+
+.reduce-motion button.icon-button.active i.fa-retweet {
+    color: $classic-secondary-color;
+}
+
+/* aeon-tweaks */
+.community-timeline__section-headline,
+.public-timeline__section-headline,
+.account__section-headline {
+    border-bottom: 0;
+    background: #4a4b51;
+}
+
+.community-timeline__section-headline a,
+.public-timeline__section-headline a,
+.account__section-headline a {
+	padding: 2px 0 2px 0;
+    background: #4a4b51;
+    border-bottom: 2px solid #53555b;
+    border-top: 2px solid #4a4b51
+}
+
+.community-timeline__section-headline .active,
+.public-timeline__section-headline .active,
+.account__section-headline .active {
+	background: #404146;
+    border-bottom: 2px solid #404146;
+    border-top: 2px solid #53555b;
+	border-radius: 15px 15px 0 0;        
+}
+
+.community-timeline__section-headline .active::before,
+.public-timeline__section-headline .active::before,
+.account__section-headline .active::before {
+	display: none !important;
+    visibility: hidden !important;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.community-timeline__section-headline .active::after,
+.public-timeline__section-headline .active::after,
+.account__section-headline .active::after {
+	display: none !important;
+    visibility: hidden !important;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
