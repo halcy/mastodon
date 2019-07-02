@@ -1012,6 +1012,7 @@ en:
     title: "%{instance} Terms of Service and Privacy Policy"
   themes:
     default: Icosahedron
+    noanime: Icosahedron (No Anime Ver.)
     mastodefault: Mastodon Default
     mastodon-light: Mastodon (light)
     contrast: High contrast
