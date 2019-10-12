@@ -175,7 +175,8 @@ jobs:
       - *attach_workspace
       - *install_system_dependencies
       - run: bundle exec i18n-tasks check-normalized
-      - run: bundle exec i18n-tasks unused -l en
+      - run: bundle exec i18n-tasks unused
+      - run: bundle exec i18n-tasks missing -t plural
       - run: bundle exec i18n-tasks check-consistent-interpolations
       - run: bundle exec rake repo:check_locales_files
 
