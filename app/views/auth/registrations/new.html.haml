@@ -28,7 +28,7 @@
   - if approved_registrations? && !@invite.present?
     .fields-group
       = f.simple_fields_for :invite_request do |invite_request_fields|
-        = invite_request_fields.input :text, as: :text, wrapper: :with_block_label, required: false
+        = invite_request_fields.input :text, input_html: { placeholder: 'please tell us briefly why you want to sign up on icosahedron.website and possibly who you are. we\'re not super picky, honestly, just give the server rules a quick read and try to not sound like a spambot' }, as: :text, wrapper: :with_block_label, required: true
 
   = f.input :invite_code, as: :hidden
 
